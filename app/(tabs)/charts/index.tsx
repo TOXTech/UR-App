@@ -1,14 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const RootLayout = () => {
+const charts = () => {
   return (
     <View>
-      <Text>RootLayout</Text>
+      <Text>charts
+      
+      </Text>
     </View>
   )
 }
 
-export default RootLayout
+export default charts
 
 const styles = StyleSheet.create({})

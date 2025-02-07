@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const RootLayout = () => {
+const tracking = () => {
   return (
     <View>
-      <Text>RootLayout</Text>
+      <Text>tracking</Text>
     </View>
   )
 }
 
-export default RootLayout
+export default tracking
 
 const styles = StyleSheet.create({})
