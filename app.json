@@ -4,6 +4,12 @@
     "slug": "EMOTO2",
     "version": "1.0.0",
     "orientation": "portrait",
+    "fonts": [
+      {
+        "asset": "./assets/fonts/Guerrilla.ttf",
+        "family": "Guerrilla"
+      }
+    ],
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
