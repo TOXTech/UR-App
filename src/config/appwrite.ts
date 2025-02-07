@@ -1,12 +1,6 @@
-// src/config/appwrite.ts
-import { Client, Account, Databases, Realtime, Storage } from 'appwrite';
+import { Client, Account, ID } from 'react-native-appwrite';
 
-const client = new Client();
-client
-  .setEndpoint('https://YOUR_APPWRITE_ENDPOINT/v1') // Your Appwrite Endpoint
-  .setProject('YOUR_PROJECT_ID');                   // Your Appwrite Project ID
+const client = new Client()
+    .setProject('67a5d1a8003cfc52b1f4')
+    .setPlatform('com.ur.emoto');
 
-export const account = new Account(client);
-export const database = new Databases(client);
-export const realtime = new Realtime(client);
-export const storage = new Storage(client);
