@@ -4,7 +4,7 @@ import React from 'react'
 const charts = () => {
   return (
     <View>
-      <Text>charts
+      <Text>Data visualization screen
       
       </Text>
     </View>

@@ -1,16 +1,16 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const resetPassword = () => {
+const Welcome = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text>resetPassword</Text>
+      <Text> Welcome/landing page</Text>
     </View>
     </SafeAreaView>
   )
 }
 
-export default resetPassword
+export default Welcome
 
 const styles = StyleSheet.create({})

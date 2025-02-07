@@ -1,17 +1,11 @@
 {
   "expo": {
-    "name": "EMOTO2",
-    "slug": "EMOTO2",
+    "name": "EMOTO",
+    "slug": "emoto",
     "version": "1.0.0",
     "orientation": "portrait",
-    "fonts": [
-      {
-        "asset": "./assets/fonts/Guerrilla.ttf",
-        "family": "Guerrilla"
-      }
-    ],
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/emoto-icon.png",
+    "scheme": "emoto",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -19,21 +13,21 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/emoto-adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/emoto_favicon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/emoto-adaptive-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"

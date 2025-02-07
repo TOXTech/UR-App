@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const MainDashboard = () => {
+const ChartStack = () => {
   return (
     <View>
-      <Text>Main dashboard screen</Text>
+      <Text>Charts stack layout</Text>
     </View>
   )
 }
 
-export default MainDashboard
+export default ChartStack
 
 const styles = StyleSheet.create({})

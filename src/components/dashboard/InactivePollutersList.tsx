@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const MainDashboard = () => {
+const InactivePollutersList = () => {
   return (
     <View>
-      <Text>Main dashboard screen</Text>
+      <Text>InactivePollutersList</Text>
     </View>
   )
 }
 
-export default MainDashboard
+export default InactivePollutersList
 
 const styles = StyleSheet.create({})

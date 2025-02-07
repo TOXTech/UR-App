@@ -4,7 +4,7 @@ import React from 'react'
 const TabsLayout = () => {
   return (
     <View>
-      <Text>TabsLayout</Text>
+      <Text>Tab navigation layout</Text>
     </View>
   )
 }

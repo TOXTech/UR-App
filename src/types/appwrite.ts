@@ -1,0 +1,1 @@
+// Appwrite related types

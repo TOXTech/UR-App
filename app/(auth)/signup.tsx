@@ -5,7 +5,7 @@ const signup = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text>signup</Text>
+      <Text>Signup screen</Text>
     </View>
     </SafeAreaView>
   )

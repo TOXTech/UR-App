@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const MainDashboard = () => {
+const SignupForm = () => {
   return (
     <View>
-      <Text>Main dashboard screen</Text>
+      <Text>SignupForm</Text>
     </View>
   )
 }
 
-export default MainDashboard
+export default SignupForm
 
 const styles = StyleSheet.create({})

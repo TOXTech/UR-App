@@ -5,7 +5,7 @@ const RootLayout = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text>RootLayout</Text>
+      <Text>Root layout with navigation setup and font loading</Text>
     </View>
     </SafeAreaView>
   )

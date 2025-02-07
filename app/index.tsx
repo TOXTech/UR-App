@@ -1,16 +1,16 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Welcome = () => {
+const InitialRoute = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text>Welcome</Text>
+      <Text>Initial route - redirects based on auth state</Text>
     </View>
     </SafeAreaView>
   )
 }
 
-export default Welcome
+export default InitialRoute
 
 const styles = StyleSheet.create({})

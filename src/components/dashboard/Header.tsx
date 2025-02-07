@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const MainDashboard = () => {
+const Header = () => {
   return (
     <View>
-      <Text>Main dashboard screen</Text>
+      <Text># Dashboard header with hamburger and username</Text>
     </View>
   )
 }
 
-export default MainDashboard
+export default Header
 
 const styles = StyleSheet.create({})
