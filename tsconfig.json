@@ -1,17 +1,35 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "strict": true,  // Enabling strict type checking
     "paths": {
       "@/*": [
-        "./*"
-      ]
-    }
+        "./*"  // Custom path aliasing, useful for cleaner imports
+      ],
+    },
+    "jsx": "react-native",  // Important for React Native JSX syntax
+    "esModuleInterop": true,  // Allow importing CommonJS modules
+    "skipLibCheck": true,  // Skips type checking for libraries
+    "forceConsistentCasingInFileNames": true,  // Ensures consistent file casing
+    "moduleResolution": "node",  // Helps with module resolution (for external libraries)
+    "allowJs": true,  // Allows JavaScript files in your project
+    "noEmit": true,  // Do not generate any output files
+    "isolatedModules": true,  // Helps with JSX and TypeScript compatibility
+    "resolveJsonModule": true,  // Allows importing JSON files
+    "target": "esnext",  // Ensures compatibility with modern JavaScript
+    "lib": ["esnext", "dom"],  // Adds type definitions for ESNext and DOM
+    "baseUrl": ".",  // Base directory for resolving modules
+    "types": ["react", "react-native", "node"]  // Ensures types for React and React Native
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "**/*.ts",  // Include all TypeScript files
+    "**/*.tsx", // Include all TypeScript React files
+    ".expo/types/**/*.ts",  // Include expo types
+    "expo-env.d.ts"  // Include custom environment variables file
+  ],
+  "exclude": [
+    "node_modules",  // Exclude node_modules to avoid unnecessary processing
+    "babel.config.js",  // Exclude Babel config since it's a JS file
+    "metro.config.js"   // Exclude Metro config as well
   ]
 }

@@ -1,16 +1,19 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Stack } from 'expo-router'; // Import Stack for routing
+import { StatusBar } from 'expo-status-bar'; // Import StatusBar
+import React from 'react';
 
-const RootLayout = () => {
+export default function RootLayout() {
   return (
-    <SafeAreaView>
-    <View>
-      <Text>Root layout with navigation setup and font loading</Text>
-    </View>
-    </SafeAreaView>
-  )
+    <>
+      <StatusBar style="light" />
+      
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(auth)/login" />
+        <Stack.Screen name="(auth)/signup" />
+        <Stack.Screen name="(auth)/Welcome" />
+        <Stack.Screen name="(tabs)/_layout" />
+      </Stack>
+    </>
+  );
 }
-
-export default RootLayout
-
-const styles = StyleSheet.create({})

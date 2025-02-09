@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
 const PersonalDashboard = () => {
   return (
     <View>
-      <Text>Personal dashboard with dynamic polluter ID
-      
-      </Text>
+      <Text>Personal dashboard with dynamic polluter ID</Text>
     </View>
   )
 }

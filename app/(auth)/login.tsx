@@ -1,16 +1,13 @@
-import { SafeAreaView,StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { useRouter } from 'expo-router';
+import { Button, Text, View } from 'react-native';
 
-const login = () => {
+export default function LoginScreen() {
+  const router = useRouter();
+
   return (
-    <SafeAreaView>
-    <View>
-      <Text>Login screen</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Login Screen</Text>
+      <Button title="Go to Dashboard" onPress={() => router.replace('(tabs)/dashboard')} />
     </View>
-    </SafeAreaView>
-  )
+  );
 }
-
-export default login
-
-const styles = StyleSheet.create({})

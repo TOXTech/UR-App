@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Charts from './charts';
+import Dashboard from './dashboard';
+import Tracking from './tracking';
 
-const TabsLayout = () => {
+const Tab = createBottomTabNavigator();
+
+export default function TabsLayout() {
   return (
-    <View>
-      <Text>Tab navigation layout</Text>
-    </View>
-  )
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Screen name="Dashboard" component={Dashboard} />
+      <Tab.Screen name="Charts" component={Charts} />
+      <Tab.Screen name="Tracking" component={Tracking} />
+    </Tab.Navigator>
+  );
 }
-
-export default TabsLayout
-
-const styles = StyleSheet.create({})
