@@ -8,7 +8,7 @@ const InitialRoute = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Welcome to E-moto</Text>
+        <Text style={styles.text}>Welcome to E-moto</Text>
         <Button title="Get started" onPress={() => router.push('(auth)/login')} />
       </View>
     </SafeAreaView>
@@ -22,5 +22,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#161622',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 20,
   },
 });
