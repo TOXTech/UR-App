@@ -1,18 +1,33 @@
+import { Poppins_600SemiBold, useFonts } from '@expo-google-fonts/poppins';
+import AppLoading from 'expo-app-loading';
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const InitialRoute = () => {
   const router = useRouter();
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Text style={styles.text}>Welcome to E-moto</Text>
-        <Button title="Get started" onPress={() => router.push('(auth)/login')} />
-      </View>
-    </SafeAreaView>
-  );
+  let [fontsLoaded] = useFonts({
+    Poppins_600SemiBold,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+          <Image source={require('../assets/images/logo 1.png')} style={styles.image} />
+        </View>
+        <View>
+          <Text style={styles.text}>Discover Endless Possibilities with EMOTO</Text>
+        </View>
+        <TouchableOpacity style={styles.button} onPress={() => router.push('(auth)/login')}>
+          <Text style={styles.buttonText}>Welcome to E-moto</Text>
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
 };
 
 export default InitialRoute;
@@ -22,10 +37,32 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#161622',
+    backgroundColor: '#10323b',
+  },
+  image: {
+    width: 200,
+    height: 200,
+    marginBottom: 1,
   },
   text: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 32,
+    top: -30,
+    textAlign: 'center',
+    fontFamily: 'Poppins_600SemiBold',
+  },
+  button: {
+    backgroundColor: '#0195AF',
+    paddingVertical: 12,
+    paddingHorizontal: 35,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 100,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });

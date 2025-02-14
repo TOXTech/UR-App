@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons'; // Make sure you have expo/vector-icons installed
 import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from "expo-status-bar";
 import React, { useRef, useState } from 'react';
 import { Animated, Button, Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
@@ -38,6 +39,7 @@ const MainDashboard = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="light" />
       {menuVisible && (
         <TouchableOpacity style={styles.overlay} onPress={toggleMenu} activeOpacity={1} />
       )}
