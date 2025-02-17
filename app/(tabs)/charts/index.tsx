@@ -1,5 +1,4 @@
 import { Client, Databases } from 'appwrite';
-import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from 'react';
 import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
@@ -46,7 +45,6 @@ type ChartSectionProps = {
 
 const ChartSection: React.FC<ChartSectionProps> = ({ title, percentage, change, dataset }) => (
   <View style={styles.chartContainer}>
-    <StatusBar style="light" />
     <Text style={styles.title}>{title}</Text>
     <Text style={styles.percentage}>{percentage}</Text>
     <Text style={[styles.change, { color: change < 0 ? 'red' : 'green' }]}> {change}% of standards</Text>

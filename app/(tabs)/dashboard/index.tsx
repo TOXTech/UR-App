@@ -1,8 +1,7 @@
 import { Ionicons } from '@expo/vector-icons'; // Make sure you have expo/vector-icons installed
 import { useNavigation } from '@react-navigation/native';
-import { StatusBar } from "expo-status-bar";
 import React, { useRef, useState } from 'react';
-import { Animated, Button, Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Animated, Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
 import { ProgressBar } from 'react-native-paper';
 
@@ -39,7 +38,7 @@ const MainDashboard = () => {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="light" />
+      {/*Menu*/}
       {menuVisible && (
         <TouchableOpacity style={styles.overlay} onPress={toggleMenu} activeOpacity={1} />
       )}
@@ -85,7 +84,7 @@ const MainDashboard = () => {
                 </View>
               </View>
             </View>
-
+          {/*Motari Lists*/}
             <View style={styles.card}>
               <Text style={styles.sectionTitle}>Polluters</Text>
               {[
@@ -113,13 +112,15 @@ const MainDashboard = () => {
           </>
         ) : (
           <View style={styles.detailContainer}>
-            <Button title="Back" onPress={() => setSelectedPolluter(null)} />
+            <TouchableOpacity style={styles.button} onPress={() => setSelectedPolluter(null)}>
+                <Text style={styles.buttonText}>Back</Text>
+              </TouchableOpacity>
             <View style={styles.Detailheader}>
               <Text style={styles.locationId}>{selectedPolluter.id}</Text>
               <Text style={styles.aqi}>AQI &lt; 50</Text>
               <Text style={styles.status}>Good</Text>
               <View style={{ marginTop: 10, flexDirection: 'row' }}>
-              <TouchableOpacity onPress={() => navigation.navigate('Charts')}>
+              <TouchableOpacity onPress={() => navigation.navigate('tracking')}>
                 <Ionicons name="location-outline" size={24} color="white" />
               </TouchableOpacity>
               </View>
@@ -304,6 +305,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#1E1E2D',
     borderRadius: 12,
     marginBottom: 16,
+  },
+  button: {
+    backgroundColor: '#0195AF',
+    paddingVertical: 12,
+    paddingHorizontal: 35,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   locationId: {
     fontSize: 24,
