@@ -1,45 +1,58 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
+import { FontAwesome } from "@expo/vector-icons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React from "react";
+import { StyleSheet } from "react-native";
+import Charts from "./charts";
+import Dashboard from "./dashboard";
+import Tracking from "./Map";
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+const Tab = createBottomTabNavigator();
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function TabsLayout() {
   return (
-    <Tabs
+    <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
-      <Tabs.Screen
-        name="index"
+        tabBarStyle: styles.tabBar,
+        tabBarActiveTintColor: "#00D9FF", // Active tab icon/text color
+        tabBarInactiveTintColor: "#7E7E8C", // Inactive tab icon/text color
+      }}
+    >
+      <Tab.Screen
+        name="Dashboard"
+        component={Dashboard}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="dashboard" size={24} color={color} />
+          ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+      <Tab.Screen
+        name="Map"
+        component={Tracking}
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="map" size={24} color={color} />
+          ),
         }}
       />
-    </Tabs>
+      <Tab.Screen
+        name="Charts"
+        component={Charts}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="bar-chart" size={24} color={color} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  tabBar: {
+    backgroundColor: "#161622", // Bottom navigation background color
+    borderTopWidth: 0, // Removes the top border
+    height: 60, // Optional: adjust height if needed
+  },
+});
