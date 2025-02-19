@@ -129,7 +129,7 @@ const TrackingScreen = () => {
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search for a motorcyclist"
+          placeholder="Search by plate number"
           placeholderTextColor="#999"
           value={plateNumber}
           onChangeText={setPlateNumber}

@@ -72,15 +72,15 @@ const MainDashboard = () => {
               <View style={styles.userMetrics}>
                 <View>
                   <Text style={styles.metricLabel}>Motorcyclists</Text>
-                  <Text style={styles.metricValue}>143</Text>
+                  <Text style={styles.metricValue}>14</Text>
                 </View>
                 <View>
                   <Text style={styles.metricLabel}>Active:</Text>
-                  <Text style={styles.metricValue}>100</Text>
+                  <Text style={styles.metricValue}>10</Text>
                 </View>
                 <View>
                   <Text style={styles.metricLabel}>Inactive:</Text>
-                  <Text style={styles.metricValue}>43</Text>
+                  <Text style={styles.metricValue}>4</Text>
                 </View>
               </View>
             </View>
@@ -88,9 +88,9 @@ const MainDashboard = () => {
             <View style={styles.card}>
               <Text style={styles.sectionTitle}>Polluters</Text>
               {[
-                { id: "RAX123", progress: 0.46, color: "#FFC107", co2: "0.46% CO2" },
-                { id: "RAX456", progress: 0.30, color: "#4CAF50", co2: "0.30% CO2" },
-                { id: "RAX789", progress: 0.60, color: "#FF5722", co2: "0.60% CO2" }
+                { id: "RX 123 X", progress: 0.46, color: "#FFC107", co2: "0.46% CO2" },
+                { id: "RX 456 X", progress: 0.30, color: "#4CAF50", co2: "0.30% CO2" },
+                { id: "RX 789 X", progress: 0.60, color: "#FF5722", co2: "0.60% CO2" }
               ].map((polluter) => (
                 <TouchableOpacity
                   key={polluter.id}
@@ -107,7 +107,7 @@ const MainDashboard = () => {
 
             <View style={styles.card}>
               <Text style={styles.sectionTitle}>Inactive Users</Text>
-              <Text style={styles.polluterText}>RAX XXX X - Hardware Issue</Text>
+              <Text style={styles.polluterText}>RX XXX X - Hardware Issue</Text>
             </View>
           </>
         ) : (
